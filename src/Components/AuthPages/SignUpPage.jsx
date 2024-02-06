@@ -6,6 +6,7 @@ const signUpIntialValues = {
   full_name: "",
   email: "",
   password: "",
+  phone: "",
 };
 
 const SignUpPage = () => {
@@ -89,7 +90,7 @@ const SignUpPage = () => {
           value={signUp.full_name}
           onChange={(e) => onHandleChange(e)}
         />
-        <p style={{ color: "red" }}>{formErrors.name}</p>
+        <p style={{ color: "red" }}>{formErrors.full_name}</p>
         <input
           style={{
             border: "2px solid black",
@@ -104,6 +105,21 @@ const SignUpPage = () => {
           onChange={(e) => onHandleChange(e)}
         />
         <p style={{ color: "red" }}>{formErrors.email}</p>
+
+        <input
+          style={{
+            border: "2px solid black",
+            borderRadius: "4px",
+            padding: "10px",
+            width: 500,
+          }}
+          type="number"
+          placeholder="Phone"
+          name="phone"
+          value={signUp.phone}
+          onChange={(e) => onHandleChange(e)}
+        />
+        <p style={{ color: "red" }}>{formErrors.phone}</p>
 
         <input
           style={{
